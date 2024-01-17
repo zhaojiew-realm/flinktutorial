@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bdfd7b82-6b93-4f3f-b115-6c45349dd8e0" name="emr-flink17">
+        <fileTransfer rootFolder="/home/hadoop" accessType="SFTP" host="192.168.17.224" port="22" sshConfigId="2034ffac-f68f-44bc-a48e-9351a11be309" sshConfig="EMR: public612+flink" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
