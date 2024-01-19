@@ -9,7 +9,7 @@ import org.apache.flink.connector.datagen.source.GeneratorFunction;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.example.bean.WaterSensor;
 
-public class WaterSensorSourceDemo {
+public class WaterSensorGenSourceDemo {
     public static void main(String[] args) throws Exception {
 
         RandomDataGenerator randomDataGenerator = new RandomDataGenerator();
