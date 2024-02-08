@@ -1,4 +1,4 @@
-package org.example.iimpl;
+package org.example.function;
 
 import org.apache.flink.api.common.functions.MapFunction;
 import org.example.bean.WaterSensor;

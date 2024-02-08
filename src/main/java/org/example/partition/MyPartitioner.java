@@ -1,4 +1,4 @@
-package org.example.shuffle;
+package org.example.partition;
 
 import org.apache.flink.api.common.functions.Partitioner;
 

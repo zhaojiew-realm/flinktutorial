@@ -1,4 +1,4 @@
-package org.example.shuffle;
+package org.example.partition;
 
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.datastream.DataStream;

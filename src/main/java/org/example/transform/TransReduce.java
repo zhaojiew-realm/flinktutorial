@@ -1,15 +1,15 @@
-package org.example.function;
+package org.example.transform;
 
 import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.example.bean.WaterSensor;
-import org.example.source.WaterSensorMapFunction;
+import org.example.function.WaterSensorMapFunctionImpl;
 
 public class TransReduce {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.socketTextStream("172.31.3.41", 18888)
-                .map(new WaterSensorMapFunction())
+                .map(new WaterSensorMapFunctionImpl())
                 .keyBy(WaterSensor::getId)
                 .reduce(new ReduceFunction<WaterSensor>() {
                     @Override

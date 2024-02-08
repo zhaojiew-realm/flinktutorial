@@ -1,4 +1,4 @@
-package org.example.function;
+package org.example.transform;
 
 import org.apache.flink.api.common.functions.RichMapFunction;
 import org.apache.flink.configuration.Configuration;

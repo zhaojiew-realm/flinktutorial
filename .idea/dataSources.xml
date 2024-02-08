@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="AWS Glue" read-only="true" uuid="876bde3a-4d88-4ac4-a77f-cbb930cd7c0c">
+    <data-source source="LOCAL" name="AWS Glue" read-only="true" uuid="31b63f49-4abb-45b1-ad7e-14785a587ca3">
       <synchronize>true</synchronize>
       <remarks>Wrapper For AWS Glue from Big Data Tools plugin</remarks>
       <jdbc-driver>com.dbschema.ZeppelinSparkJdbcDriver</jdbc-driver>

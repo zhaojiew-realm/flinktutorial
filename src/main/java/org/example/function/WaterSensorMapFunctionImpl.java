@@ -1,9 +1,9 @@
-package org.example.source;
+package org.example.function;
 
 import org.apache.flink.api.common.functions.MapFunction;
 import org.example.bean.WaterSensor;
 
-public class WaterSensorMapFunction implements MapFunction<String, WaterSensor> {
+public class WaterSensorMapFunctionImpl implements MapFunction<String, WaterSensor> {
     @Override
     public WaterSensor map(String value) throws Exception {
         String[] datas = value.split(",");

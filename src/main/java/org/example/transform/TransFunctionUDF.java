@@ -1,4 +1,4 @@
-package org.example.function;
+package org.example.transform;
 
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSink;
