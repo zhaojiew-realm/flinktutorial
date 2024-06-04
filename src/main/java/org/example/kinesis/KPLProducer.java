@@ -12,7 +12,7 @@ public class KPLProducer {
         for (int i = 0; i < 100; ++i) {
             ByteBuffer data = ByteBuffer.wrap("myData".getBytes("UTF-8"));
             // doesn't block
-            kinesis.addUserRecord("flinktest16", "myPartitionKey"+i, data);
+            kinesis.addUserRecord("dsdefault", "myPartitionKey"+i, data);
             Thread.sleep(1000);
         }
     }

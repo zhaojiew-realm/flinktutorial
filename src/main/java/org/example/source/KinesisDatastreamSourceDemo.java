@@ -20,7 +20,7 @@ public class KinesisDatastreamSourceDemo {
         consumerConfig.put(ConsumerConfigConstants.STREAM_INITIAL_POSITION, "LATEST");
 
         DataStream<String> kinesis = senv.addSource(new FlinkKinesisConsumer<>(
-                "flinktest16", new SimpleStringSchema(), consumerConfig));
+                "dsdefault", new SimpleStringSchema(), consumerConfig));
         kinesis.print();
         senv.execute();
     }
