@@ -38,7 +38,7 @@ public class ProcessLateData {
                     }
                 }));
 
-        OutputTag<Event> outputTag = new OutputTag<Event>("late");
+        OutputTag<Event> outputTag = new OutputTag<Event>("late"){};
         SingleOutputStreamOperator<UrlViewCount> result = stream.keyBy(data -> data.url).window(TumblingEventTimeWindows.of(Time.seconds(10)))
                 // 方式二：允许窗口处理迟到数据，设置 1 分钟的等待时间
                 .allowedLateness(Time.minutes(1))
