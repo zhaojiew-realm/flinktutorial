@@ -1,29 +1,31 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.demo</groupId>
+        <artifactId>flinktutorial</artifactId>
+        <version>1.0</version>
+    </parent>
 
-    <groupId>org.demo</groupId>
-    <artifactId>flinktutorial</artifactId>
-    <version>1.0</version>
-    <packaging>pom</packaging>
-
-    <name>flinktutorial</name>
-    <url>http://maven.apache.org</url>
-    <modules>
-        <module>flinkcdc</module>
-    </modules>
+    <groupId>org.example</groupId>
+    <artifactId>flinkcdc</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <flink.version>1.17.0</flink.version>
-        <java.version>1.8</java.version>
-        <slf4j.version>1.7.20</slf4j.version>
     </properties>
 
     <dependencies>
-
+        <!--        flink cdc-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-java</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-java</artifactId>
@@ -36,82 +38,35 @@
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-runtime-web</artifactId>
+            <artifactId>flink-table-planner_2.12</artifactId>
             <version>${flink.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-files</artifactId>
-            <version>1.17.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-hadoop-compatibility_2.12</artifactId>
-            <version>1.17.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-client</artifactId>
-            <version>3.3.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-kafka</artifactId>
+            <artifactId>flink-table-runtime</artifactId>
             <version>${flink.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-aws-kinesis-firehose</artifactId>
-            <version>4.1.0-1.17</version>
+            <artifactId>flink-table-api-java-bridge</artifactId>
+            <version>${flink.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-datagen</artifactId>
-            <version>1.17.0</version>
+            <artifactId>flink-connector-base</artifactId>
+            <version>${flink.version}</version>
         </dependency>
-
         <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-kinesis</artifactId>
-            <version>4.1.0-1.17</version>
+            <groupId>com.ververica</groupId>
+            <artifactId>flink-connector-mysql-cdc</artifactId>
+            <version>3.0.0</version>
         </dependency>
-
         <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-aws-kinesis-streams</artifactId>
-            <version>4.1.0-1.17</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.31</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-s3-fs-hadoop</artifactId>
-            <version>1.17.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>amazon-kinesis-producer</artifactId>
-            <version>0.12.11</version>
-        </dependency>
-
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -164,4 +119,5 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
 </project>
